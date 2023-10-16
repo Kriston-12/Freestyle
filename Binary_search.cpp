@@ -16,8 +16,9 @@ int main() {
 
 	int arr[] = {1, 3, 4, 5, 7, 8, 10, 12, 14, 15};
 	int high = sizeof(arr)/sizeof(arr[0]);
+	srand(time(NULL));
 	int low = 0;
-	int num = 1;
+	int num = rand() % 15 + 1;
 	//printf("enter a number, we will search for you: ");
 	//scanf("%d", &num);
 	int step = 0;;
@@ -36,13 +37,13 @@ int main() {
 		else
 			printf("we found the number\n");
 			step++;
-			break;
+			printf("%d", step);	
+			return 0;
 
 	}
-	if (high < low)
-		printf("wrong number");
 	
-	printf("%d", step);
+	printf("We did not find such number");
+	return 0;
 
 		
 }
