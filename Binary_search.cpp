@@ -21,7 +21,7 @@ int main() {
 	//printf("enter a number, we will search for you: ");
 	//scanf("%d", &num);
 	int step = 0;;
-	while (low < high) {
+	while (low <= high) {
 		int mid = (high + low) / 2;
 		if (num > arr[mid]) {
 			low = mid + 1;
